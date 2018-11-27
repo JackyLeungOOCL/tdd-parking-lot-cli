@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ParkingBoy {
-    protected List<ParkingLot> parkingLots;
-    protected String lastErrorMessage;
+    List<ParkingLot> parkingLots;
+    String lastErrorMessage;
 
     public ParkingBoy(ParkingLot parkingLot) {
         parkingLots = new ArrayList<>();
@@ -20,7 +20,7 @@ public class ParkingBoy {
         return park(car, 0);
     }
 
-    public ParkingTicket park(Car car, int parkingLotNumber) {
+    private ParkingTicket park(Car car, int parkingLotNumber) {
         try {
             if (parkingLotNumber >= parkingLots.size()) {
                 return null;
@@ -45,7 +45,7 @@ public class ParkingBoy {
         return fetch(ticket, 0);
     }
 
-    public Car fetch(ParkingTicket ticket, int parkingLotNumber) {
+    private Car fetch(ParkingTicket ticket, int parkingLotNumber) {
         try {
             if (parkingLotNumber >= parkingLots.size()) {
                 return null;
