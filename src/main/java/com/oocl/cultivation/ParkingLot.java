@@ -58,8 +58,4 @@ public class ParkingLot {
         cars.remove(ticket, car);
         return car;
     }
-
-    public void changeManager(ParkingLotServiceManager manager) {
-        this.manager = manager;
-    }
 }
