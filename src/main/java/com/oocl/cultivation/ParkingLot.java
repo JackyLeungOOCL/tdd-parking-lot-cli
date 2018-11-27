@@ -31,11 +31,11 @@ public class ParkingLot {
         return capacity - cars.size();
     }
 
-    public int getCapacity() {
+    int getCapacity() {
         return capacity;
     }
 
-    public ParkingTicket generateTicket(Car car) {
+    ParkingTicket generateTicket(Car car) {
         int carPos = getAvailableParkingPosition();
         if (carPos <= 0) {
             throw new RuntimeException("The parking lot is full.");
@@ -47,7 +47,7 @@ public class ParkingLot {
         return ticket;
     }
 
-    public Car receiveTicket(ParkingTicket ticket) {
+    Car receiveTicket(ParkingTicket ticket) {
         if (ticket == null) {
             throw new RuntimeException("Please provide your parking ticket.");
         }
